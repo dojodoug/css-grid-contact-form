@@ -1,0 +1,138 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: #EDF2F6;
+	line-height: 1.6;
+	font-family: "Lucida Console", Monaco, monospace;
+	padding: 1em;
+}
+
+nav, footer {
+	background: #D5E1C8;
+}
+
+nav h3, footer h3 {
+	text-align: center;
+}
+
+.container {
+	max-width: 1150px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 1em;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+.wrapper {
+	box-shadow: 0 0 10px rgba(72, 94, 116, 0.3);
+}
+
+.wrapper > * {
+	padding: 1em;
+}
+
+.company-info {
+	background: #BBCCDE;
+}
+
+.company-info h3, .company-info ul {
+	text-align: center;
+	margin: 0 0 1rem 0;
+}
+
+.contact {
+	background: #F9FBFD;
+	padding: 1em;
+}
+
+/* FROM STYLES */
+.contact form {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 20px;
+}
+
+.contact form label {
+	display: block;
+}
+
+.contact h3 {
+	margin-top: 0;
+}
+
+.contact form p {
+	margin: 0;
+}
+
+.contact form .full {
+	grid-column: 1 / 3;
+}
+
+.contact form button, .contact form input, .contact form textarea {
+	width: 100%;
+	padding: 1em;
+	border: 1px solid #c9e6ff;
+}
+
+.contact form button {
+	background: #DCE6ED;
+	border: 0;
+	text-transform: uppercase;
+	font-family: "Lucida Console", Monaco, monospace;
+	font-size: 14px;
+	padding: 10px;
+}
+
+.contact form button:hover, .contact form button:focus {
+	background: #E6EDB9;
+	transition: background-color 0.5s ease-out;
+}
+
+@media(min-width: 700px) {
+	.wrapper {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+	}
+
+	.wrapper > * {
+		padding: 2em;
+	}
+
+	.wrapper nav, .wrapper footer {
+		grid-column: 1 / -1;
+		padding: 10px;
+	}
+
+	nav h3, footer h3 {
+		padding-left: 20px;
+	}
+
+	.nav-contact {
+		display: inline-block;
+	}
+
+	.nav-comment {
+		float: right;
+		padding-right: 20px;
+	}
+
+	.company-info {
+		grid-column: 1 / 5;
+		animation-delay: 0.35s;
+	}
+
+	.company-info h3, .company-info ul, .brand {
+		text-align: left;
+	}
+
+	.contact {
+		grid-column: 5 / -1;
+		animation-delay: 0.35s;
+	}
+}
